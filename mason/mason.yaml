@@ -1,0 +1,11 @@
+bricks:
+  i18n:
+    path: D:/final mason/mason_mvvm_architecture/bricks/i18n
+  readme:
+    path: D:/final mason/mason_mvvm_architecture/bricks/readme
+  assets:
+    path: D:/final mason/mason_mvvm_architecture/bricks/assets
+  core:
+    path: D:/final mason/mason_mvvm_architecture/bricks/core
+  feature:
+    path: D:/final mason/mason_mvvm_architecture/bricks/feature
