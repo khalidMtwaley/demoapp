@@ -176,7 +176,18 @@ class AppTextStyle {
       _font(16, FontWeight.w600, color);
   static TextStyle font16Bold({required Color color}) =>
       _font(16, FontWeight.w700, color);
+// ---------- 17 ----------
+static TextStyle font17Regular({required Color color}) =>
+    _font(17, FontWeight.w400, color);
 
+static TextStyle font17Medium({required Color color}) =>
+    _font(17, FontWeight.w500, color);
+
+static TextStyle font17SemiBold({required Color color}) =>
+    _font(17, FontWeight.w600, color);
+
+static TextStyle font17Bold({required Color color}) =>
+    _font(17, FontWeight.w700, color);
   static TextStyle font18Regular({required Color color}) =>
       _font(18, FontWeight.w400, color);
   static TextStyle font18Medium({required Color color}) =>
@@ -186,6 +197,18 @@ class AppTextStyle {
   static TextStyle font18Bold({required Color color}) =>
       _font(18, FontWeight.w700, color);
 
+// ---------- 19 ----------
+static TextStyle font19Regular({required Color color}) =>
+    _font(19, FontWeight.w400, color);
+
+static TextStyle font19Medium({required Color color}) =>
+    _font(19, FontWeight.w500, color);
+
+static TextStyle font19SemiBold({required Color color}) =>
+    _font(19, FontWeight.w600, color);
+
+static TextStyle font19Bold({required Color color}) =>
+    _font(19, FontWeight.w700, color);
   static TextStyle font20Regular({required Color color}) =>
       _font(20, FontWeight.w400, color);
   static TextStyle font20Medium({required Color color}) =>
@@ -194,6 +217,18 @@ class AppTextStyle {
       _font(20, FontWeight.w600, color);
   static TextStyle font20Bold({required Color color}) =>
       _font(20, FontWeight.w700, color);
+ // ---------- 21 ----------
+static TextStyle font21Regular({required Color color}) =>
+    _font(21, FontWeight.w400, color);
+
+static TextStyle font21Medium({required Color color}) =>
+    _font(21, FontWeight.w500, color);
+
+static TextStyle font21SemiBold({required Color color}) =>
+    _font(21, FontWeight.w600, color);
+
+static TextStyle font21Bold({required Color color}) =>
+    _font(21, FontWeight.w700, color);
 
   static TextStyle font22Regular({required Color color}) =>
       _font(22, FontWeight.w400, color);
@@ -203,7 +238,19 @@ class AppTextStyle {
       _font(22, FontWeight.w600, color);
   static TextStyle font22Bold({required Color color}) =>
       _font(22, FontWeight.w700, color);
+// ---------- 23 ----------
+static TextStyle font23Regular({required Color color}) =>
+    _font(23, FontWeight.w400, color);
 
+static TextStyle font23Medium({required Color color}) =>
+    _font(23, FontWeight.w500, color);
+
+static TextStyle font23SemiBold({required Color color}) =>
+    _font(23, FontWeight.w600, color);
+
+static TextStyle font23Bold({required Color color}) =>
+    _font(23, FontWeight.w700, color);
+  // ---------- 24 ----------
   static TextStyle font24Regular({required Color color}) =>
       _font(24, FontWeight.w400, color);
   static TextStyle font24Medium({required Color color}) =>
@@ -213,6 +260,7 @@ class AppTextStyle {
   static TextStyle font24Bold({required Color color}) =>
       _font(24, FontWeight.w700, color);
 
+
   static TextStyle font25Regular({required Color color}) =>
       _font(25, FontWeight.w400, color);
   static TextStyle font25Medium({required Color color}) =>
@@ -221,4 +269,104 @@ class AppTextStyle {
       _font(25, FontWeight.w600, color);
   static TextStyle font25Bold({required Color color}) =>
       _font(25, FontWeight.w700, color);
+        // ---------- 26 ----------
+  static TextStyle font26Regular({required Color color}) =>
+      _font(26, FontWeight.w400, color);
+  static TextStyle font26Medium({required Color color}) =>
+      _font(26, FontWeight.w500, color);
+  static TextStyle font26SemiBold({required Color color}) =>
+      _font(26, FontWeight.w600, color);
+  static TextStyle font26Bold({required Color color}) =>
+      _font(26, FontWeight.w700, color);
+
+  // ---------- 27 ----------
+  static TextStyle font27Regular({required Color color}) =>
+      _font(27, FontWeight.w400, color);
+  static TextStyle font27Medium({required Color color}) =>
+      _font(27, FontWeight.w500, color);
+  static TextStyle font27SemiBold({required Color color}) =>
+      _font(27, FontWeight.w600, color);
+  static TextStyle font27Bold({required Color color}) =>
+      _font(27, FontWeight.w700, color);
+
+  // ---------- 28 ----------
+  static TextStyle font28Regular({required Color color}) =>
+      _font(28, FontWeight.w400, color);
+  static TextStyle font28Medium({required Color color}) =>
+      _font(28, FontWeight.w500, color);
+  static TextStyle font28SemiBold({required Color color}) =>
+      _font(28, FontWeight.w600, color);
+  static TextStyle font28Bold({required Color color}) =>
+      _font(28, FontWeight.w700, color);
+
+  // ---------- 29 ----------
+  static TextStyle font29Regular({required Color color}) =>
+      _font(29, FontWeight.w400, color);
+  static TextStyle font29Medium({required Color color}) =>
+      _font(29, FontWeight.w500, color);
+  static TextStyle font29SemiBold({required Color color}) =>
+      _font(29, FontWeight.w600, color);
+  static TextStyle font29Bold({required Color color}) =>
+      _font(29, FontWeight.w700, color);
+
+  // ---------- 30 ----------
+  static TextStyle font30Regular({required Color color}) =>
+      _font(30, FontWeight.w400, color);
+  static TextStyle font30Medium({required Color color}) =>
+      _font(30, FontWeight.w500, color);
+  static TextStyle font30SemiBold({required Color color}) =>
+      _font(30, FontWeight.w600, color);
+  static TextStyle font30Bold({required Color color}) =>
+      _font(30, FontWeight.w700, color);
+
+  // ---------- 31 ----------
+  static TextStyle font31Regular({required Color color}) =>
+      _font(31, FontWeight.w400, color);
+  static TextStyle font31Medium({required Color color}) =>
+      _font(31, FontWeight.w500, color);
+  static TextStyle font31SemiBold({required Color color}) =>
+      _font(31, FontWeight.w600, color);
+  static TextStyle font31Bold({required Color color}) =>
+      _font(31, FontWeight.w700, color);
+
+  // ---------- 32 ----------
+  static TextStyle font32Regular({required Color color}) =>
+      _font(32, FontWeight.w400, color);
+  static TextStyle font32Medium({required Color color}) =>
+      _font(32, FontWeight.w500, color);
+  static TextStyle font32SemiBold({required Color color}) =>
+      _font(32, FontWeight.w600, color);
+  static TextStyle font32Bold({required Color color}) =>
+      _font(32, FontWeight.w700, color);
+
+  // ---------- 33 ----------
+  static TextStyle font33Regular({required Color color}) =>
+      _font(33, FontWeight.w400, color);
+  static TextStyle font33Medium({required Color color}) =>
+      _font(33, FontWeight.w500, color);
+  static TextStyle font33SemiBold({required Color color}) =>
+      _font(33, FontWeight.w600, color);
+  static TextStyle font33Bold({required Color color}) =>
+      _font(33, FontWeight.w700, color);
+
+  // ---------- 34 ----------
+  static TextStyle font34Regular({required Color color}) =>
+      _font(34, FontWeight.w400, color);
+  static TextStyle font34Medium({required Color color}) =>
+      _font(34, FontWeight.w500, color);
+  static TextStyle font34SemiBold({required Color color}) =>
+      _font(34, FontWeight.w600, color);
+  static TextStyle font34Bold({required Color color}) =>
+      _font(34, FontWeight.w700, color);
+
+  // ---------- 35 ----------
+  static TextStyle font35Regular({required Color color}) =>
+      _font(35, FontWeight.w400, color);
+  static TextStyle font35Medium({required Color color}) =>
+      _font(35, FontWeight.w500, color);
+  static TextStyle font35SemiBold({required Color color}) =>
+      _font(35, FontWeight.w600, color);
+  static TextStyle font35Bold({required Color color}) =>
+      _font(35, FontWeight.w700, color);
+
 }
