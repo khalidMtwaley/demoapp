@@ -1,3 +1,4 @@
+import 'package:demoapp/core/images/app_images.dart';
 import 'package:demoapp/features/onboarding/screens/on_boarding_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -16,42 +17,42 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   final List<OnBoardingModel> onBoardingList = [
     OnBoardingModel(
-      image: 'assets/svg/onboarding_1.svg',
+      image: AppImages.assetsSvgOnBoardingOnboarding2,
       title: 'مرحبا بك',
       description: 'وصف بسيط للشاشة الأولى',
     ),
     OnBoardingModel(
-      image: 'assets/svg/onboarding_2.svg',
+      image: AppImages.assetsSvgOnBoardingOnboarding3,
       title: 'سهولة الاستخدام',
       description: 'وصف بسيط للشاشة الثانية',
     ),
     OnBoardingModel(
-      image: 'assets/svg/onboarding_3.svg',
+      image: AppImages.assetsSvgOnBoardingOnboarding4,
       title: 'تجربة سريعة',
       description: 'وصف بسيط للشاشة الثالثة',
     ),
     OnBoardingModel(
-      image: 'assets/svg/onboarding_4.svg',
+      image: AppImages.assetsSvgOnBoardingOnboarding5,
       title: 'تواصل أسهل',
       description: 'وصف بسيط للشاشة الرابعة',
     ),
     OnBoardingModel(
-      image: 'assets/svg/onboarding_5.svg',
+      image: AppImages.assetsSvgOnBoardingOnboarding6,
       title: 'أمان تام',
       description: 'وصف بسيط للشاشة الخامسة',
     ),
     OnBoardingModel(
-      image: 'assets/svg/onboarding_6.svg',
+      image: AppImages.assetsSvgOnBoardingOnboarding7,
       title: 'تنظيم أفضل',
       description: 'وصف بسيط للشاشة السادسة',
     ),
     OnBoardingModel(
-      image: 'assets/svg/onboarding_7.svg',
+      image: AppImages.assetsSvgOnBoardingOnboarding8,
       title: 'متابعة مستمرة',
       description: 'وصف بسيط للشاشة السابعة',
     ),
     OnBoardingModel(
-      image: 'assets/svg/onboarding_8.svg',
+      image: AppImages.assetsSvgOnBoardingOnboarding9,
       title: 'ابدأ الآن',
       description: 'وصف بسيط للشاشة الأخيرة',
     ),
@@ -167,7 +168,7 @@ class _OnBoardingItem extends StatelessWidget {
         children: [
           SvgPicture.asset(
             imagePath,
-            height: 260,
+            // height: 240,
           ),
           const SizedBox(height: 40),
           Text(

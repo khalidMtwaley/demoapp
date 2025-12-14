@@ -77,5 +77,41 @@ class AppImages {
   /// Assets for assetsSvgArrowDown
   /// assets/svg/arrowDown.svg
   static const String assetsSvgArrowDown = "assets/svg/arrowDown.svg";
+
+  /// Assets for assetsSvgOnBoardingBaseOnBoarding
+  /// assets/svg/on_boarding/baseOnBoarding.svg
+  static const String assetsSvgOnBoardingBaseOnBoarding = "assets/svg/on_boarding/baseOnBoarding.svg";
+
+  /// Assets for assetsSvgOnBoardingOnboarding2
+  /// assets/svg/on_boarding/onboarding2.svg
+  static const String assetsSvgOnBoardingOnboarding2 = "assets/svg/on_boarding/onboarding2.svg";
+
+  /// Assets for assetsSvgOnBoardingOnboarding3
+  /// assets/svg/on_boarding/onboarding3.svg
+  static const String assetsSvgOnBoardingOnboarding3 = "assets/svg/on_boarding/onboarding3.svg";
+
+  /// Assets for assetsSvgOnBoardingOnboarding4
+  /// assets/svg/on_boarding/onboarding4.svg
+  static const String assetsSvgOnBoardingOnboarding4 = "assets/svg/on_boarding/onboarding4.svg";
+
+  /// Assets for assetsSvgOnBoardingOnboarding5
+  /// assets/svg/on_boarding/onboarding5.svg
+  static const String assetsSvgOnBoardingOnboarding5 = "assets/svg/on_boarding/onboarding5.svg";
+
+  /// Assets for assetsSvgOnBoardingOnboarding6
+  /// assets/svg/on_boarding/onboarding6.svg
+  static const String assetsSvgOnBoardingOnboarding6 = "assets/svg/on_boarding/onboarding6.svg";
+
+  /// Assets for assetsSvgOnBoardingOnboarding7
+  /// assets/svg/on_boarding/onboarding7.svg
+  static const String assetsSvgOnBoardingOnboarding7 = "assets/svg/on_boarding/onboarding7.svg";
+
+  /// Assets for assetsSvgOnBoardingOnboarding8
+  /// assets/svg/on_boarding/onboarding8.svg
+  static const String assetsSvgOnBoardingOnboarding8 = "assets/svg/on_boarding/onboarding8.svg";
+
+  /// Assets for assetsSvgOnBoardingOnboarding9
+  /// assets/svg/on_boarding/onboarding9.svg
+  static const String assetsSvgOnBoardingOnboarding9 = "assets/svg/on_boarding/onboarding9.svg";
 }
 
