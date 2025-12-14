@@ -54,7 +54,7 @@ ThemeData appThemeData(BuildContext context) {
         ),
         // labelColor: AppColor.whiteColor(context),
         //  unselectedLabelColor: AppColor.darkTextColor(context),
-        labelStyle: AppTextStyle.text12RWhite(context),
+        // labelStyle: AppTextStyle.text12RWhite(context),
       ));
 }
 

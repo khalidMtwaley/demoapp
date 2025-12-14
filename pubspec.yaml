@@ -130,7 +130,7 @@ flutter:
     - assets/
 
   fonts:
-    - family: Poppins
+    - family: Alexandria
       fonts:
         - asset: assets/fonts/Alexandria-Regular.ttf
           weight: 400
