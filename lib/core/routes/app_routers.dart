@@ -13,6 +13,10 @@ class AppRouters {
       //       model: args,
       //     ),
       //   );
+      case RoutesName.mainOnBoardingScreen:
+        return MaterialPageRoute(
+          builder: (_) => const OnBoardingScreen(),
+        );
       default:
         return null;
     }

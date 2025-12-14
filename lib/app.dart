@@ -28,7 +28,7 @@ class _DemoappState extends State<Demoapp> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: const Size(360, 690),
+        designSize: const Size(430, 932),
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (_, child) {
@@ -43,7 +43,7 @@ class _DemoappState extends State<Demoapp> {
               theme: appThemeData(context),
               builder: BotToastInit(),
               navigatorObservers: [BotToastNavigatorObserver()],
-              initialRoute: RoutesName.splashScreen,
+              initialRoute: RoutesName.mainOnBoardingScreen,
               onGenerateRoute: AppRouters.onGenerateRoute,
               navigatorKey: AppRouters.navigatorKey,
             );

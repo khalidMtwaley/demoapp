@@ -9,9 +9,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'app.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
+
   await Hive.initFlutter();
   await ScreenUtil.ensureScreenSize();
   Hive.registerAdapter(ThemeEnumAdapter());
