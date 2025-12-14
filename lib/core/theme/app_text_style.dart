@@ -6,7 +6,6 @@ class AppTextStyle {
     return TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w500,
-      fontFamily: 'Vazirmatn',
       color: AppColor.appBarTextColor(context, listen: listen),
     );
   }
