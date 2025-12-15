@@ -195,8 +195,8 @@ class AppColor {
   static Color dividerColor(BuildContext context, {bool listen = true}) {
     return AppTheme.getByTheme(
       context,
-      light: const Color(0xFFDADADA),
-      dark: const Color(0xFFDADADA),
+      light: const Color(0xFFf5f5f5),
+      dark: const Color(0xFFf5f5f5),
       listen: listen,
     );
   }

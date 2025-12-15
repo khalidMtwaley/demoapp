@@ -36,7 +36,6 @@ class _ZoomImageScreenState extends State<ZoomImageScreen> {
       appBar: CustomAppBar(
         context,
         centerTitle: false,
-        automaticallyImplyLeading: true,
       ),
       body: PhotoView(
         imageProvider: _imageProvider(),

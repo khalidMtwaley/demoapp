@@ -82,6 +82,10 @@ class AppImages {
   /// assets/svg/on_boarding/baseOnBoarding.svg
   static const String assetsSvgOnBoardingBaseOnBoarding = "assets/svg/on_boarding/baseOnBoarding.svg";
 
+  /// Assets for assetsSvgOnBoardingOmboardingnew4
+  /// assets/svg/on_boarding/omboardingnew4.svg
+  static const String assetsSvgOnBoardingOmboardingnew4 = "assets/svg/on_boarding/omboardingnew4.svg";
+
   /// Assets for assetsSvgOnBoardingOnboarding2
   /// assets/svg/on_boarding/onboarding2.svg
   static const String assetsSvgOnBoardingOnboarding2 = "assets/svg/on_boarding/onboarding2.svg";
@@ -113,5 +117,9 @@ class AppImages {
   /// Assets for assetsSvgOnBoardingOnboarding9
   /// assets/svg/on_boarding/onboarding9.svg
   static const String assetsSvgOnBoardingOnboarding9 = "assets/svg/on_boarding/onboarding9.svg";
+
+  /// Assets for assetsSvgOnBoardingOnboardingfixed
+  /// assets/svg/on_boarding/onboardingfixed.svg
+  static const String assetsSvgOnBoardingOnboardingfixed = "assets/svg/on_boarding/onboardingfixed.svg";
 }
 

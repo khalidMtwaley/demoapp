@@ -7,55 +7,56 @@ import 'app_theme.dart';
 
 ThemeData appThemeData(BuildContext context) {
   return ThemeData(
-      primaryColor: AppColor.mainAppColor(context),
-      visualDensity: VisualDensity.adaptivePlatformDensity,
-      useMaterial3: false,
-      hintColor: AppColor.hintColor(context),
+    primaryColor: AppColor.mainAppColor(context),
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+    useMaterial3: false,
+    hintColor: AppColor.hintColor(context),
+    brightness: AppTheme.getByTheme(
+      context,
+      light: Brightness.light,
+      dark: Brightness.dark,
+    ),
+    buttonTheme: ButtonThemeData(
+      buttonColor: AppColor.mainAppColor(context),
+      alignedDropdown: true,
+    ),
+    bottomSheetTheme: const BottomSheetThemeData(backgroundColor: Colors.white),
+    colorScheme: ColorScheme.fromSwatch().copyWith(
+      primary: AppColor.mainAppColor(context),
+      secondary: AppColor.blackColor(context),
+      surface: AppColor.whiteColor(context),
       brightness: AppTheme.getByTheme(
         context,
         light: Brightness.light,
         dark: Brightness.dark,
       ),
-      buttonTheme: ButtonThemeData(
-        buttonColor: AppColor.mainAppColor(context),
-        alignedDropdown: true,
+    ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColor.whiteColor(context),
+      elevation: 0,
+      centerTitle: true,
+      titleTextStyle:AppTextStyle.font16SemiBold(color: AppColor.blackColor(context)),
+      foregroundColor: AppColor.appBarTextColor(context),
+    ),
+    scaffoldBackgroundColor: AppColor.scaffoldColor(context),
+    fontFamily: context.fontFamily(),
+    textSelectionTheme: TextSelectionThemeData(
+      cursorColor: AppColor.mainAppColor(context),
+    ),
+    platform: TargetPlatform.iOS,
+    tabBarTheme: TabBarThemeData(
+      dividerColor: Colors.transparent,
+      indicatorSize: TabBarIndicatorSize.tab,
+      indicator: BoxDecoration(
+        boxShadow: appShadow,
+        color: AppColor.mainAppColor(context),
+        borderRadius: BorderRadius.circular(50),
       ),
-      bottomSheetTheme: const BottomSheetThemeData(backgroundColor: Colors.white),
-      colorScheme: ColorScheme.fromSwatch().copyWith(
-        primary: AppColor.mainAppColor(context),
-        secondary: AppColor.blackColor(context),
-        surface: AppColor.whiteColor(context),
-        brightness: AppTheme.getByTheme(
-          context,
-          light: Brightness.light,
-          dark: Brightness.dark,
-        ),
-      ),
-      appBarTheme: AppBarTheme(
-        color: AppColor.blackColor(context),
-        elevation: 0,
-        centerTitle: true,
-        titleTextStyle: AppTextStyle.appBarStyle(context),
-        foregroundColor: AppColor.appBarTextColor(context),
-      ),
-      scaffoldBackgroundColor: AppColor.scaffoldColor(context),
-      fontFamily: context.fontFamily(),
-      textSelectionTheme: TextSelectionThemeData(
-        cursorColor: AppColor.mainAppColor(context),
-      ),
-      platform: TargetPlatform.iOS,
-      tabBarTheme: TabBarThemeData(
-        dividerColor: Colors.transparent,
-        indicatorSize: TabBarIndicatorSize.tab,
-        indicator: BoxDecoration(
-          boxShadow: appShadow,
-          color: AppColor.mainAppColor(context),
-          borderRadius: BorderRadius.circular(50),
-        ),
-        // labelColor: AppColor.whiteColor(context),
-        //  unselectedLabelColor: AppColor.darkTextColor(context),
-        // labelStyle: AppTextStyle.text12RWhite(context),
-      ));
+      // labelColor: AppColor.whiteColor(context),
+      //  unselectedLabelColor: AppColor.darkTextColor(context),
+      // labelStyle: AppTextStyle.text12RWhite(context),
+    ),
+  );
 }
 
 List<BoxShadow> appShadow = [

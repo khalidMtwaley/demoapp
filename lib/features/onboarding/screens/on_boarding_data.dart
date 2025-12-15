@@ -31,6 +31,8 @@ class OnBoardingItem extends StatelessWidget {
   final int index;
   double _getImageOffsetY(int index) {
     switch (index) {
+      case 2 :
+        return 70.h;
       case 3:
         return 48.h;
       case 4:

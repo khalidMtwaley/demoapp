@@ -31,9 +31,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       description: 'وصف بسيط للشاشة الثانية',
     ),
     OnBoardingModel(
-      image: AppImages.assetsSvgOnBoardingOnboarding4,
+      image: AppImages.assetsSvgOnBoardingOmboardingnew4,
       title: 'عنوان عنوان',
       description: 'وصف بسيط للشاشة الثالثة',
+      showExtraImage: true,
+      extraImage: AppImages.assetsSvgOnBoardingBaseOnBoarding,
     ),
     OnBoardingModel(
       image: AppImages.assetsSvgOnBoardingOnboarding5,
