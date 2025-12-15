@@ -1,6 +1,8 @@
 import 'package:demoapp/core/images/app_images.dart';
+import 'package:demoapp/core/routes/routes_name.dart';
 import 'package:demoapp/core/theme/app_colors.dart';
 import 'package:demoapp/core/theme/app_text_style.dart';
+import 'package:demoapp/core/utils/navigator_methods.dart';
 import 'package:demoapp/features/onboarding/screens/on_boarding_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -71,10 +73,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   ];
 
   void goToLogin() {
-    // Navigator.pushReplacement(
-    //   context,
-    //   MaterialPageRoute(builder: (_) => const LoginScreen()),
-    // );
+    NavigatorMethods.pushNamedAndRemoveUntil(context, RoutesName.loginScreen);
   }
 
   @override

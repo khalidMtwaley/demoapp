@@ -13,9 +13,19 @@ class AppRouters {
       //       model: args,
       //     ),
       //   );
+      // login
+
       case RoutesName.mainOnBoardingScreen:
         return MaterialPageRoute(
           builder: (_) => const OnBoardingScreen(),
+        );
+      case RoutesName.loginScreen:
+        return MaterialPageRoute(
+          builder: (_) => const LoginScreen(),
+        );
+      case RoutesName.registerScreen:
+        return MaterialPageRoute(
+          builder: (_) => const RegisterScreen(),
         );
       default:
         return null;

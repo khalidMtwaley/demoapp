@@ -21,6 +21,7 @@ class AppColor {
       listen: listen,
     );
   }
+
   static Color lightBlack1(BuildContext context, {bool listen = true}) {
     return AppTheme.getByTheme(
       context,
@@ -33,8 +34,8 @@ class AppColor {
   static Color scaffoldColor(BuildContext context, {bool listen = true}) {
     return AppTheme.getByTheme(
       context,
-      light: const Color(0xFFF9F9F9),
-      dark: const Color(0xFFF9F9F9),
+      light:  Colors.white,
+      dark: Colors.white,
       listen: listen,
     );
   }
@@ -42,8 +43,24 @@ class AppColor {
   static Color hintColor(BuildContext context, {bool listen = true}) {
     return AppTheme.getByTheme(
       context,
-      light: const Color(0xffA6A6A6),
-      dark: const Color(0xffA6A6A6),
+      light: const Color(0xffA49B9B),
+      dark: const Color(0xffA49B9B),
+      listen: listen,
+    );
+  }
+  static Color fillColorGrey(BuildContext context, {bool listen = true}) {
+    return AppTheme.getByTheme(
+      context,
+      light: const Color(0xfff6f7f9),
+      dark: const Color(0xfff6f7f9),
+      listen: listen,
+    );
+  }
+  static Color greyButtonColor(BuildContext context, {bool listen = true}) {
+    return AppTheme.getByTheme(
+      context,
+      light: const Color(0xffececec),
+      dark: const Color(0xffececec),
       listen: listen,
     );
   }
@@ -114,8 +131,8 @@ class AppColor {
   static Color textFormBorderColor(BuildContext context, {bool listen = true}) {
     return AppTheme.getByTheme(
       context,
-      light: const Color(0xFFD9D9D9),
-      dark: const Color(0xFFD9D9D9),
+      light: const Color(0xffD8DADC),
+      dark: const Color(0xffD8DADC),
       listen: listen,
     );
   }
@@ -183,6 +200,15 @@ class AppColor {
       listen: listen,
     );
   }
+  static Color blueColor(BuildContext context, {bool listen = true}) {
+    return AppTheme.getByTheme(
+      context,
+      light: const Color(0xFF2C7195),
+      dark: const Color(0xFF2C7195),
+      listen: listen,
+    );
+  }
+
 
 
 

@@ -29,7 +29,7 @@ class AppTextStyle {
     return TextStyle(
       fontFamily: 'Alexandria',
 
-      fontSize: 12,
+      fontSize: 14,
       fontWeight: FontWeight.w400,
       color: AppColor.hintColor(context, listen: listen),
     );
