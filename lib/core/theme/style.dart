@@ -23,7 +23,7 @@ ThemeData appThemeData(BuildContext context) {
       bottomSheetTheme: const BottomSheetThemeData(backgroundColor: Colors.white),
       colorScheme: ColorScheme.fromSwatch().copyWith(
         primary: AppColor.mainAppColor(context),
-        secondary: AppColor.secondAppColor(context),
+        secondary: AppColor.blackColor(context),
         surface: AppColor.whiteColor(context),
         brightness: AppTheme.getByTheme(
           context,
@@ -32,7 +32,7 @@ ThemeData appThemeData(BuildContext context) {
         ),
       ),
       appBarTheme: AppBarTheme(
-        color: AppColor.secondAppColor(context),
+        color: AppColor.blackColor(context),
         elevation: 0,
         centerTitle: true,
         titleTextStyle: AppTextStyle.appBarStyle(context),

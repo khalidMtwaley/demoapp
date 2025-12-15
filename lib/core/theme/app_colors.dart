@@ -12,20 +12,20 @@ class AppColor {
     );
   }
 
-  static Color secondAppColor(BuildContext context, {bool listen = true}) {
-    return AppTheme.getByTheme(
-      context,
-      light: const Color(0xff23120B),
-      dark: const Color(0xff23120B),
-      listen: listen,
-    );
-  }
 
   static Color borderColor(BuildContext context, {bool listen = true}) {
     return AppTheme.getByTheme(
       context,
-      light: const Color(0xffA6A6A6),
-      dark: const Color(0xffA6A6A6),
+      light: const Color(0xff7D8488),
+      dark: const Color(0xff7D8488),
+      listen: listen,
+    );
+  }
+  static Color lightBlack1(BuildContext context, {bool listen = true}) {
+    return AppTheme.getByTheme(
+      context,
+      light: const Color(0xff263238),
+      dark: const Color(0xff263238),
       listen: listen,
     );
   }
@@ -54,6 +54,14 @@ class AppColor {
       context,
       light: const Color(0xFFA5A5A5),
       dark: const Color(0xFFA5A5A5),
+      listen: listen,
+    );
+  }
+  static Color greyTextColor(BuildContext context, {bool listen = true}) {
+    return AppTheme.getByTheme(
+      context,
+      light: const Color(0xFF959296),
+      dark: const Color(0xFF959296),
       listen: listen,
     );
   }
@@ -86,8 +94,8 @@ class AppColor {
   static Color blackColor(BuildContext context, {bool listen = true}) {
     return AppTheme.getByTheme(
       context,
-      light: const Color(0xff010728),
-      dark: const Color(0xff010728),
+      light: const Color(0xff0f172a),
+      dark: const Color(0xff0f172a),
       listen: listen,
     );
   }

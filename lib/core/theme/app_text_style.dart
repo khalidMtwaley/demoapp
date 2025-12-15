@@ -65,7 +65,7 @@ class AppTextStyle {
 
       fontSize: 20,
       fontWeight: FontWeight.w600,
-      color: color ?? AppColor.secondAppColor(context, listen: listen),
+      color: color ?? AppColor.blackColor(context, listen: listen),
     );
   }
 
@@ -79,7 +79,7 @@ class AppTextStyle {
 
       fontSize: 16,
       fontWeight: FontWeight.w500,
-      color: color ?? AppColor.secondAppColor(context, listen: listen),
+      color: color ?? AppColor.blackColor(context, listen: listen),
     );
   }
 

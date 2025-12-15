@@ -1,6 +1,9 @@
 import 'package:demoapp/core/images/app_images.dart';
+import 'package:demoapp/core/theme/app_colors.dart';
+import 'package:demoapp/core/theme/app_text_style.dart';
 import 'package:demoapp/features/onboarding/screens/on_boarding_data.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -34,6 +37,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       image: AppImages.assetsSvgOnBoardingOnboarding5,
       title: 'تواصل أسهل',
       description: 'وصف بسيط للشاشة الرابعة',
+      showExtraImage: true,
+      extraImage: AppImages.assetsSvgOnBoardingBaseOnBoarding,
     ),
     OnBoardingModel(
       image: AppImages.assetsSvgOnBoardingOnboarding6,
@@ -46,21 +51,21 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       image: AppImages.assetsSvgOnBoardingOnboarding7,
       title: 'تنظيم أفضل',
       description: 'وصف بسيط للشاشة السادسة',
-            showExtraImage: true,
+      showExtraImage: true,
       extraImage: AppImages.assetsSvgOnBoardingBaseOnBoarding,
     ),
     OnBoardingModel(
       image: AppImages.assetsSvgOnBoardingOnboarding8,
       title: 'متابعة مستمرة',
       description: 'وصف بسيط للشاشة السابعة',
-            showExtraImage: true,
+      showExtraImage: true,
       extraImage: AppImages.assetsSvgOnBoardingBaseOnBoarding,
     ),
     OnBoardingModel(
       image: AppImages.assetsSvgOnBoardingOnboarding9,
       title: 'ابدأ الآن',
       description: 'وصف بسيط للشاشة الأخيرة',
-            showExtraImage: true,
+      showExtraImage: true,
       extraImage: AppImages.assetsSvgOnBoardingBaseOnBoarding,
     ),
   ];
@@ -79,6 +84,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       body: SafeArea(
         child: Column(
           children: [
+            40.verticalSpace,
             Expanded(
               child: PageView.builder(
                 controller: _pageController,
@@ -88,27 +94,22 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 },
                 itemBuilder: (context, index) {
                   final item = onBoardingList[index];
-                  return _OnBoardingItem(
-                    item: item,
-                    index: index,
-                    imagePath: item.image,
-                    title: item.title,
-                    description: item.description,
-                  );
+                  return OnBoardingItem(item: item, index: index);
                 },
               ),
             ),
 
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30.h),
               child: Row(
                 children: [
-                  /// Skip
                   GestureDetector(
                     onTap: goToLogin,
-                    child: const Text(
-                      'تخطي',
-                      style: TextStyle(color: Colors.grey, fontSize: 14),
+                    child: Text(
+                      'التخطي',
+                      style: AppTextStyle.font14SemiBold(
+                        color: AppColor.greyTextColor(context),
+                      ),
                     ),
                   ),
 
@@ -126,16 +127,25 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       }
                     },
                     child: Container(
-                      width: 44,
-                      height: 44,
+                      width: 68.w,
+                      height: 68.h,
+                      padding: EdgeInsets.all(2.w),
                       decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(
+                          color: AppColor.borderColor(context),
+                        ),
+                        borderRadius: BorderRadius.circular(14.r),
                       ),
-                      child: const Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.white,
-                        size: 18,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: AppColor.lightBlack1(context),
+                          borderRadius: BorderRadius.circular(12.r),
+                        ),
+                        child: const Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 22,
+                        ),
                       ),
                     ),
                   ),
@@ -144,60 +154,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class _OnBoardingItem extends StatelessWidget {
-  const _OnBoardingItem({
-    required this.imagePath,
-    required this.title,
-    required this.description,
-        required this.item,
-
-    required this.index,
-  });
-
-  final String imagePath;
-  final String title;
-  final String description;
-  final int index;
-    final OnBoardingModel item;
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SvgPicture.asset(
-            imagePath,
-            // height: 240,
-          ),
-                if (item.showExtraImage && item.extraImage != null) ...[
-            const SizedBox(height: 16),
-            SvgPicture.asset(
-              item.extraImage!,
-              height: 80,
-              fit: BoxFit.contain,
-            ),
-          ],
-          const SizedBox(height: 40),
-          Text(
-            title,
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 12),
-          Text(
-            description,
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 14, color: Colors.grey),
-          ),
-        ],
       ),
     );
   }
