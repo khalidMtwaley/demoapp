@@ -7,9 +7,9 @@ extension ContextExtension on BuildContext {
 
   double height() => MediaQuery.sizeOf(this).height;
 
-  String fontFamily() => apiTr(ar: 'Vazirmatn', en: 'Vazirmatn');
-  String fontFamilyAr() => 'Vazirmatn';
-  String fontFamilyEn() => 'Vazirmatn';
+  String fontFamily() => apiTr(ar: 'Alexandria', en: 'Alexandria');
+  String fontFamilyAr() => 'Alexandria';
+  String fontFamilyEn() => 'Alexandria';
 
   String apiTr({
     required String ar,

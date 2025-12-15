@@ -3,7 +3,6 @@ import 'package:demoapp/features/onboarding/screens/on_boarding_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
 
@@ -40,21 +39,29 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       image: AppImages.assetsSvgOnBoardingOnboarding6,
       title: 'أمان تام',
       description: 'وصف بسيط للشاشة الخامسة',
+      showExtraImage: true,
+      extraImage: AppImages.assetsSvgOnBoardingBaseOnBoarding,
     ),
     OnBoardingModel(
       image: AppImages.assetsSvgOnBoardingOnboarding7,
       title: 'تنظيم أفضل',
       description: 'وصف بسيط للشاشة السادسة',
+            showExtraImage: true,
+      extraImage: AppImages.assetsSvgOnBoardingBaseOnBoarding,
     ),
     OnBoardingModel(
       image: AppImages.assetsSvgOnBoardingOnboarding8,
       title: 'متابعة مستمرة',
       description: 'وصف بسيط للشاشة السابعة',
+            showExtraImage: true,
+      extraImage: AppImages.assetsSvgOnBoardingBaseOnBoarding,
     ),
     OnBoardingModel(
       image: AppImages.assetsSvgOnBoardingOnboarding9,
       title: 'ابدأ الآن',
       description: 'وصف بسيط للشاشة الأخيرة',
+            showExtraImage: true,
+      extraImage: AppImages.assetsSvgOnBoardingBaseOnBoarding,
     ),
   ];
 
@@ -82,6 +89,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 itemBuilder: (context, index) {
                   final item = onBoardingList[index];
                   return _OnBoardingItem(
+                    item: item,
+                    index: index,
                     imagePath: item.image,
                     title: item.title,
                     description: item.description,
@@ -91,10 +100,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             ),
 
             Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 20,
-                vertical: 16,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
               child: Row(
                 children: [
                   /// Skip
@@ -102,10 +108,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     onTap: goToLogin,
                     child: const Text(
                       'تخطي',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 14,
-                      ),
+                      style: TextStyle(color: Colors.grey, fontSize: 14),
                     ),
                   ),
 
@@ -113,13 +116,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
                   InkWell(
                     onTap: () {
-                      if (currentIndex ==
-                          onBoardingList.length - 1) {
+                      if (currentIndex == onBoardingList.length - 1) {
                         goToLogin();
                       } else {
                         _pageController.nextPage(
-                          duration:
-                              const Duration(milliseconds: 300),
+                          duration: const Duration(milliseconds: 300),
                           curve: Curves.easeInOut,
                         );
                       }
@@ -153,11 +154,17 @@ class _OnBoardingItem extends StatelessWidget {
     required this.imagePath,
     required this.title,
     required this.description,
+        required this.item,
+
+    required this.index,
   });
 
   final String imagePath;
   final String title;
   final String description;
+  final int index;
+    final OnBoardingModel item;
+
 
   @override
   Widget build(BuildContext context) {
@@ -170,23 +177,25 @@ class _OnBoardingItem extends StatelessWidget {
             imagePath,
             // height: 240,
           ),
+                if (item.showExtraImage && item.extraImage != null) ...[
+            const SizedBox(height: 16),
+            SvgPicture.asset(
+              item.extraImage!,
+              height: 80,
+              fit: BoxFit.contain,
+            ),
+          ],
           const SizedBox(height: 40),
           Text(
             title,
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-            ),
+            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 12),
           Text(
             description,
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 14,
-              color: Colors.grey,
-            ),
+            style: const TextStyle(fontSize: 14, color: Colors.grey),
           ),
         ],
       ),
