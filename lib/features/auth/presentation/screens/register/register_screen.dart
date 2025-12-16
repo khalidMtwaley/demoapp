@@ -5,10 +5,15 @@ import 'package:demoapp/core/custom_widgets/custom_drop_down/custom_country_form
 import 'package:demoapp/core/custom_widgets/custom_drop_down/custom_drop_down_over_lay.dart';
 import 'package:demoapp/core/custom_widgets/custom_form_field/custom_form_field.dart';
 import 'package:demoapp/core/extension/widget_extensions.dart';
+import 'package:demoapp/core/images/app_images.dart';
+import 'package:demoapp/core/routes/routes_name.dart';
 import 'package:demoapp/core/theme/app_colors.dart';
 import 'package:demoapp/core/theme/app_text_style.dart';
+import 'package:demoapp/core/utils/navigator_methods.dart';
+import 'package:demoapp/features/auth/presentation/widgets/register/custom_select_gender_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -24,6 +29,7 @@ final TextEditingController firstNameController = TextEditingController();
 final TextEditingController lastNameController = TextEditingController();
 final TextEditingController userNameController = TextEditingController();
 final TextEditingController emailController = TextEditingController();
+final TextEditingController phoneController = TextEditingController();
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final List<CustomSelectDropdownItem> arabCountries = [
@@ -51,6 +57,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
     CustomSelectDropdownItem(value: 'KM', name: 'جزر القمر'),
   ];
   Country? selectedCountry;
+  @override
+  void initState() {
+    selectedCountry = Country.parse('SA');
+
+    super.initState();
+    // selectedCountry = Country(
+    //   phoneCode: '20',
+    //   countryCode: 'EG',
+    //   e164Sc: 0,
+    //   geographic: true,
+    //   level: 1,
+    //   name: 'Egypt',
+    //   example: '01234567890',
+    //   displayName: 'Egypt (EG)',
+    //   displayNameNoCountryCode: 'Egypt',
+    //   e164Key: '20-0-EG-1',
+    // );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -167,7 +191,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         },
                         child: Container(
                           height: 65.h,
-                          padding: EdgeInsets.symmetric(horizontal: 12.w),
+                          padding: EdgeInsets.symmetric(horizontal: 23.w),
                           decoration: BoxDecoration(
                             color: AppColor.whiteColor(context),
                             borderRadius: BorderRadius.circular(14),
@@ -195,11 +219,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                       ),
 
-                      10.horizontalSpace,
+                      15.horizontalSpace,
 
-                      /// -------- Phone Field --------
                       Expanded(
                         child: CustomFormField(
+                          controller: phoneController,
                           hintText: 'رقم الهاتف',
                           keyboardType: TextInputType.phone,
                         ),
@@ -208,15 +232,31 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ],
               ),
-
-              30.verticalSpace,
-
+              24.verticalSpace,
+              const CustomSelectGenderWidget(),
+              14.verticalSpace,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(AppImages.assetsImagesAuthShield),
+                  14.horizontalSpace,
+                  Text(
+                    'جميع معلوماتك سرية',
+                    style: AppTextStyle.font12Regular(
+                      color: AppColor.blackColor(context),
+                    ),
+                  ),
+                ],
+              ),
+              16.verticalSpace,
               CustomButton(
-                text: 'تسجيل',
+                isGrey: true,
+                text: 'المتابعة',
                 onPressed: () {
-                  if (registerFormKey.currentState!.validate()) {
-                    /// submit
-                  }
+                  NavigatorMethods.pushNamed(
+                    context,
+                    RoutesName.registerSelectAvatarScreen,
+                  );
                 },
               ),
 

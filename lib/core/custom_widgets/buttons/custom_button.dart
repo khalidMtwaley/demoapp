@@ -56,8 +56,8 @@ class CustomButton extends StatelessWidget {
               color:
                   color ??
                   (isGrey
-                      ? AppColor.lightBlack1(context)
-                      : AppColor.greyButtonColor(context)),
+                      ? AppColor.greyButtonColor(context)
+                      : AppColor.lightBlack1(context)),
               gradient: gradient,
               borderRadius: borderRadius ?? BorderRadius.circular(radius),
               border: Border.all(color: borderColor ?? Colors.transparent),
@@ -94,8 +94,8 @@ class CustomButton extends StatelessWidget {
                                     style ??
                                     AppTextStyle.font15Medium(
                                       color: isGrey
-                                          ? AppColor.whiteColor(context)
-                                          : AppColor.lightBlack1(context),
+                                          ? AppColor.lightBlack1(context)
+                                          : AppColor.whiteColor(context),
                                     ),
                               ),
                         ),

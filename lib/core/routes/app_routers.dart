@@ -19,6 +19,11 @@ class AppRouters {
         return MaterialPageRoute(
           builder: (_) => const OnBoardingScreen(),
         );
+
+      case RoutesName.registerSelectAvatarScreen:
+        return MaterialPageRoute(
+          builder: (_) => const RegisterSelectAvatarScreen(),
+        );
       case RoutesName.loginScreen:
         return MaterialPageRoute(
           builder: (_) => const LoginScreen(),

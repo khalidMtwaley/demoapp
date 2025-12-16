@@ -28,22 +28,33 @@ class ImageMethods {
     onSuccess.call(result);
   }
 
-  static void pickImageBottomSheet(
-    BuildContext context, {
-    required void Function(File) onSuccessCamera,
-    required void Function(List<File>) onSuccessGallery,
-  }) {
-    NavigatorMethods.showAppBottomSheet(
-      context,
-      ChooseGalleryOrCameraBottomSheet(
-        onCamera: () => ImageMethods.pickImage(
+static void pickImageBottomSheet(
+  BuildContext context, {
+  required void Function(File) onSuccessCamera,
+  required void Function(List<File>) onSuccessGallery,
+}) {
+  NavigatorMethods.showAppBottomSheet(
+    context,
+    ChooseGalleryOrCameraBottomSheet(
+      onCamera: () {
+        ImageMethods.pickImage(
           source: ImageSource.camera,
-          onSuccess: onSuccessCamera,
-        ),
-        onGallery: () => ImageMethods.pickMultiImage(
-          onSuccess: onSuccessGallery,
-        ),
-      ),
-    );
-  }
+          onSuccess: (file) {
+            Navigator.pop(context); 
+            onSuccessCamera.call(file);
+          },
+        );
+      },
+      onGallery: () {
+        ImageMethods.pickMultiImage(
+          onSuccess: (files) {
+            Navigator.pop(context); 
+            onSuccessGallery.call(files);
+          },
+        );
+      },
+    ),
+  );
+}
+
 }

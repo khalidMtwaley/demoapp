@@ -127,6 +127,7 @@ flutter:
     - i18n/
     - assets/images/
     - assets/images/auth/
+    - assets/images/avatar/
     - assets/svg/
     - assets/svg/on_boarding/
     - assets/global_icon/

@@ -21,6 +21,22 @@ class AppColor {
       listen: listen,
     );
   }
+  static Color greenColor(BuildContext context, {bool listen = true}) {
+    return AppTheme.getByTheme(
+      context,
+      light: const Color(0xff249F58),
+      dark: const Color(0xff249F58),
+      listen: listen,
+    );
+  }
+  static Color lightGreenColor(BuildContext context, {bool listen = true}) {
+    return AppTheme.getByTheme(
+      context,
+      light: const Color(0xffe7faf4),
+      dark: const Color(0xffe7faf4),
+      listen: listen,
+    );
+  }
 
   static Color lightBlack1(BuildContext context, {bool listen = true}) {
     return AppTheme.getByTheme(

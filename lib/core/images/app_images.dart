@@ -70,9 +70,21 @@ class AppImages {
   /// assets/global_icon/warning.svg
   static const String assetsGlobalIconWarning = "assets/global_icon/warning.svg";
 
+  /// Assets for assetsImagesAuthBoyGenderSelect
+  /// assets/images/auth/boyGenderSelect.png
+  static const String assetsImagesAuthBoyGenderSelect = "assets/images/auth/boyGenderSelect.png";
+
+  /// Assets for assetsImagesAuthGirlGenderSelect
+  /// assets/images/auth/girlGenderSelect.png
+  static const String assetsImagesAuthGirlGenderSelect = "assets/images/auth/girlGenderSelect.png";
+
   /// Assets for assetsImagesAuthLogoBackGround
   /// assets/images/auth/logoBackGround.png
   static const String assetsImagesAuthLogoBackGround = "assets/images/auth/logoBackGround.png";
+
+  /// Assets for assetsImagesAuthShield
+  /// assets/images/auth/shield.svg
+  static const String assetsImagesAuthShield = "assets/images/auth/shield.svg";
 
   /// Assets for assetsSvgArrowDown
   /// assets/svg/arrowDown.svg
