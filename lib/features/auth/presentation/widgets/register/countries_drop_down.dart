@@ -1,0 +1,26 @@
+  import 'package:demoapp/core/custom_widgets/custom_drop_down/custom_drop_down_over_lay.dart';
+
+final List<CustomSelectDropdownItem> arabCountries = [
+    CustomSelectDropdownItem(value: 'EG', name: 'مصر'),
+    CustomSelectDropdownItem(value: 'SA', name: 'السعودية'),
+    CustomSelectDropdownItem(value: 'AE', name: 'الإمارات'),
+    CustomSelectDropdownItem(value: 'KW', name: 'الكويت'),
+    CustomSelectDropdownItem(value: 'QA', name: 'قطر'),
+    CustomSelectDropdownItem(value: 'BH', name: 'البحرين'),
+    CustomSelectDropdownItem(value: 'OM', name: 'عُمان'),
+    CustomSelectDropdownItem(value: 'JO', name: 'الأردن'),
+    CustomSelectDropdownItem(value: 'LB', name: 'لبنان'),
+    CustomSelectDropdownItem(value: 'SY', name: 'سوريا'),
+    CustomSelectDropdownItem(value: 'IQ', name: 'العراق'),
+    CustomSelectDropdownItem(value: 'YE', name: 'اليمن'),
+    CustomSelectDropdownItem(value: 'PS', name: 'فلسطين'),
+    CustomSelectDropdownItem(value: 'SD', name: 'السودان'),
+    CustomSelectDropdownItem(value: 'LY', name: 'ليبيا'),
+    CustomSelectDropdownItem(value: 'TN', name: 'تونس'),
+    CustomSelectDropdownItem(value: 'DZ', name: 'الجزائر'),
+    CustomSelectDropdownItem(value: 'MA', name: 'المغرب'),
+    CustomSelectDropdownItem(value: 'MR', name: 'موريتانيا'),
+    CustomSelectDropdownItem(value: 'SO', name: 'الصومال'),
+    CustomSelectDropdownItem(value: 'DJ', name: 'جيبوتي'),
+    CustomSelectDropdownItem(value: 'KM', name: 'جزر القمر'),
+  ];

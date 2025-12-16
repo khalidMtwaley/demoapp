@@ -86,9 +86,77 @@ class AppImages {
   /// assets/images/auth/shield.svg
   static const String assetsImagesAuthShield = "assets/images/auth/shield.svg";
 
+  /// Assets for assetsImagesAvatarAvatar1
+  /// assets/images/avatar/avatar1.png
+  static const String assetsImagesAvatarAvatar1 = "assets/images/avatar/avatar1.png";
+
+  /// Assets for assetsImagesAvatarAvatar10
+  /// assets/images/avatar/avatar10.png
+  static const String assetsImagesAvatarAvatar10 = "assets/images/avatar/avatar10.png";
+
+  /// Assets for assetsImagesAvatarAvatar11
+  /// assets/images/avatar/avatar11.png
+  static const String assetsImagesAvatarAvatar11 = "assets/images/avatar/avatar11.png";
+
+  /// Assets for assetsImagesAvatarAvatar12
+  /// assets/images/avatar/avatar12.png
+  static const String assetsImagesAvatarAvatar12 = "assets/images/avatar/avatar12.png";
+
+  /// Assets for assetsImagesAvatarAvatar13
+  /// assets/images/avatar/avatar13.png
+  static const String assetsImagesAvatarAvatar13 = "assets/images/avatar/avatar13.png";
+
+  /// Assets for assetsImagesAvatarAvatar14
+  /// assets/images/avatar/avatar14.png
+  static const String assetsImagesAvatarAvatar14 = "assets/images/avatar/avatar14.png";
+
+  /// Assets for assetsImagesAvatarAvatar15
+  /// assets/images/avatar/avatar15.png
+  static const String assetsImagesAvatarAvatar15 = "assets/images/avatar/avatar15.png";
+
+  /// Assets for assetsImagesAvatarAvatar16
+  /// assets/images/avatar/avatar16.png
+  static const String assetsImagesAvatarAvatar16 = "assets/images/avatar/avatar16.png";
+
+  /// Assets for assetsImagesAvatarAvatar2
+  /// assets/images/avatar/avatar2.png
+  static const String assetsImagesAvatarAvatar2 = "assets/images/avatar/avatar2.png";
+
+  /// Assets for assetsImagesAvatarAvatar3
+  /// assets/images/avatar/avatar3.png
+  static const String assetsImagesAvatarAvatar3 = "assets/images/avatar/avatar3.png";
+
+  /// Assets for assetsImagesAvatarAvatar4
+  /// assets/images/avatar/avatar4.png
+  static const String assetsImagesAvatarAvatar4 = "assets/images/avatar/avatar4.png";
+
+  /// Assets for assetsImagesAvatarAvatar5
+  /// assets/images/avatar/avatar5.png
+  static const String assetsImagesAvatarAvatar5 = "assets/images/avatar/avatar5.png";
+
+  /// Assets for assetsImagesAvatarAvatar6
+  /// assets/images/avatar/avatar6.png
+  static const String assetsImagesAvatarAvatar6 = "assets/images/avatar/avatar6.png";
+
+  /// Assets for assetsImagesAvatarAvatar7
+  /// assets/images/avatar/avatar7.png
+  static const String assetsImagesAvatarAvatar7 = "assets/images/avatar/avatar7.png";
+
+  /// Assets for assetsImagesAvatarAvatar8
+  /// assets/images/avatar/avatar8.png
+  static const String assetsImagesAvatarAvatar8 = "assets/images/avatar/avatar8.png";
+
+  /// Assets for assetsImagesAvatarAvatar9
+  /// assets/images/avatar/avatar9.png
+  static const String assetsImagesAvatarAvatar9 = "assets/images/avatar/avatar9.png";
+
   /// Assets for assetsSvgArrowDown
   /// assets/svg/arrowDown.svg
   static const String assetsSvgArrowDown = "assets/svg/arrowDown.svg";
+
+  /// Assets for assetsSvgAuthGreenCamera
+  /// assets/svg/auth/greenCamera.svg
+  static const String assetsSvgAuthGreenCamera = "assets/svg/auth/greenCamera.svg";
 
   /// Assets for assetsSvgOnBoardingBaseOnBoarding
   /// assets/svg/on_boarding/baseOnBoarding.svg

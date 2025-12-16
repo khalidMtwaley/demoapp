@@ -10,7 +10,9 @@ import 'package:demoapp/core/routes/routes_name.dart';
 import 'package:demoapp/core/theme/app_colors.dart';
 import 'package:demoapp/core/theme/app_text_style.dart';
 import 'package:demoapp/core/utils/navigator_methods.dart';
+import 'package:demoapp/features/auth/presentation/widgets/register/countries_drop_down.dart';
 import 'package:demoapp/features/auth/presentation/widgets/register/custom_select_gender_widget.dart';
+import 'package:demoapp/features/auth/presentation/widgets/register/secret_info_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -32,30 +34,7 @@ final TextEditingController emailController = TextEditingController();
 final TextEditingController phoneController = TextEditingController();
 
 class _RegisterScreenState extends State<RegisterScreen> {
-  final List<CustomSelectDropdownItem> arabCountries = [
-    CustomSelectDropdownItem(value: 'EG', name: 'مصر'),
-    CustomSelectDropdownItem(value: 'SA', name: 'السعودية'),
-    CustomSelectDropdownItem(value: 'AE', name: 'الإمارات'),
-    CustomSelectDropdownItem(value: 'KW', name: 'الكويت'),
-    CustomSelectDropdownItem(value: 'QA', name: 'قطر'),
-    CustomSelectDropdownItem(value: 'BH', name: 'البحرين'),
-    CustomSelectDropdownItem(value: 'OM', name: 'عُمان'),
-    CustomSelectDropdownItem(value: 'JO', name: 'الأردن'),
-    CustomSelectDropdownItem(value: 'LB', name: 'لبنان'),
-    CustomSelectDropdownItem(value: 'SY', name: 'سوريا'),
-    CustomSelectDropdownItem(value: 'IQ', name: 'العراق'),
-    CustomSelectDropdownItem(value: 'YE', name: 'اليمن'),
-    CustomSelectDropdownItem(value: 'PS', name: 'فلسطين'),
-    CustomSelectDropdownItem(value: 'SD', name: 'السودان'),
-    CustomSelectDropdownItem(value: 'LY', name: 'ليبيا'),
-    CustomSelectDropdownItem(value: 'TN', name: 'تونس'),
-    CustomSelectDropdownItem(value: 'DZ', name: 'الجزائر'),
-    CustomSelectDropdownItem(value: 'MA', name: 'المغرب'),
-    CustomSelectDropdownItem(value: 'MR', name: 'موريتانيا'),
-    CustomSelectDropdownItem(value: 'SO', name: 'الصومال'),
-    CustomSelectDropdownItem(value: 'DJ', name: 'جيبوتي'),
-    CustomSelectDropdownItem(value: 'KM', name: 'جزر القمر'),
-  ];
+
   Country? selectedCountry;
   @override
   void initState() {
@@ -94,7 +73,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               20.verticalSpace,
-
               Text(
                 'البيانات الأساسية',
                 style: AppTextStyle.font22SemiBold(
@@ -127,9 +105,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ],
               ),
-
               20.verticalSpace,
-
               Row(
                 children: [
                   Expanded(
@@ -153,9 +129,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ],
               ),
-
               20.verticalSpace,
-
               CustomFormField(
                 title: 'البريد الإلكتروني',
                 controller: emailController,
@@ -171,9 +145,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       color: AppColor.blackColor(context),
                     ),
                   ),
-
                   11.verticalSpace,
-
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -235,19 +207,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               24.verticalSpace,
               const CustomSelectGenderWidget(),
               14.verticalSpace,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SvgPicture.asset(AppImages.assetsImagesAuthShield),
-                  14.horizontalSpace,
-                  Text(
-                    'جميع معلوماتك سرية',
-                    style: AppTextStyle.font12Regular(
-                      color: AppColor.blackColor(context),
-                    ),
-                  ),
-                ],
-              ),
+              const SecretInformationTextWidget(),
               16.verticalSpace,
               CustomButton(
                 isGrey: true,

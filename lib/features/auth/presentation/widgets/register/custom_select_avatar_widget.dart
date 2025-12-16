@@ -2,11 +2,14 @@ import 'dart:io';
 
 import 'package:demoapp/core/custom_widgets/buttons/custom_button.dart';
 import 'package:demoapp/core/extension/widget_extensions.dart';
+import 'package:demoapp/core/images/app_images.dart';
 import 'package:demoapp/core/images/image_methods.dart';
 import 'package:demoapp/core/theme/app_colors.dart';
 import 'package:demoapp/core/theme/app_text_style.dart';
+import 'package:demoapp/features/auth/presentation/widgets/register/secret_info_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomSelectAvatarsWidget extends StatefulWidget {
   final void Function(int? avatarIndex, File? imageFile)? onChanged;
@@ -87,26 +90,26 @@ class _CustomSelectAvatarsWidgetState extends State<CustomSelectAvatarsWidget> {
 
                       if (isSelected)
                         Positioned(
-                          top: -6,
                           left: 0,
                           right: 0,
+                          bottom: -8.h,
                           child: Align(
                             alignment: Alignment.topCenter,
                             child: Container(
-                              width: 22,
-                              height: 22,
+                              width: 24.w,
+                              height: 24.h,
                               decoration: BoxDecoration(
-                                color: AppColor.greenColor(context),
-                                shape: BoxShape.circle,
                                 border: Border.all(
-                                  color: Colors.white,
+                                  color: AppColor.greenColor(context),
                                   width: 2,
                                 ),
+                                color: AppColor.whiteColor(context),
+                                shape: BoxShape.circle,
                               ),
-                              child: const Icon(
+                              child: Icon(
                                 Icons.check,
-                                size: 14,
-                                color: Colors.white,
+                                color: AppColor.greenColor(context),
+                                size: 16,
                               ),
                             ),
                           ),
@@ -120,7 +123,6 @@ class _CustomSelectAvatarsWidgetState extends State<CustomSelectAvatarsWidget> {
         ),
 
         24.verticalSpace,
-
         Row(
           children: [
             Expanded(child: Divider(thickness: 1, color: Colors.grey.shade300)),
@@ -138,13 +140,15 @@ class _CustomSelectAvatarsWidgetState extends State<CustomSelectAvatarsWidget> {
             Expanded(child: Divider(thickness: 1, color: Colors.grey.shade300)),
           ],
         ),
-
         32.verticalSpace,
-
         CustomButton(
+          height: 60.h,
+          suffixIcon: SvgPicture.asset(AppImages.assetsSvgAuthGreenCamera),
+          suffixSpace: 20.w,
+          radius: 35.r,
           color: AppColor.lightGreenColor(context),
           style: AppTextStyle.font16SemiBold(
-            color: AppColor.greenColor(context),
+            color: AppColor.greenColor2(context),
           ),
           text: 'اختر صورة من الجهاز',
           onPressed: () {
@@ -165,6 +169,7 @@ class _CustomSelectAvatarsWidgetState extends State<CustomSelectAvatarsWidget> {
             );
           },
         ).paddingHorizontal(7.w),
+        8.verticalSpace,
 
         ValueListenableBuilder<File?>(
           valueListenable: selectedImageFile,
@@ -214,6 +219,8 @@ class _CustomSelectAvatarsWidgetState extends State<CustomSelectAvatarsWidget> {
             );
           },
         ),
+        36.verticalSpace,
+        const SecretInformationTextWidget(),
       ],
     );
   }

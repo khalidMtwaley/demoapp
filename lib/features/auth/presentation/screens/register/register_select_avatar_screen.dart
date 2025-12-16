@@ -51,10 +51,7 @@ class _RegisterSelectAvatarScreenState
                       color: AppColor.greyTextColor(context),
                     ),
                   ),
-
                   24.verticalSpace,
-
-                  /// -------- Avatars Widget --------
                   CustomSelectAvatarsWidget(
                     onChanged: (avatarIndex, imageFile) {
                       selectedAvatarIndex = avatarIndex;
@@ -66,33 +63,12 @@ class _RegisterSelectAvatarScreenState
             ),
           ),
 
-          Padding(
-            padding: EdgeInsets.all(16.w),
-            child: CustomButton(
-              text: 'المتابعة',
-              isGrey: true,
-              onPressed: () {},
-              // isValid
-              //     ? () {
-              //         if (selectedAvatarIndex != null) {
-              //           /// TODO: send avatar index
-              //           debugPrint(
-              //             'Avatar index: $selectedAvatarIndex',
-              //           );
-              //         }
-
-              //         if (selectedImageFile != null) {
-              //           /// TODO: upload image
-              //           debugPrint(
-              //             'Image file: ${selectedImageFile!.path}',
-              //           );
-              //         }
-
-              //         /// Navigate next
-              //       }
-              //     : null,
-            ),
-          ),
+          CustomButton(
+            text: 'المتابعة',
+            isGrey: true,
+            onPressed: () {},
+          ).paddingHorizontal(16.w),
+          40.verticalSpace,
         ],
       ),
     );

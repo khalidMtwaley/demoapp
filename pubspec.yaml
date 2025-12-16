@@ -130,6 +130,7 @@ flutter:
     - assets/images/avatar/
     - assets/svg/
     - assets/svg/on_boarding/
+    - assets/svg/auth/
     - assets/global_icon/
     - assets/
 

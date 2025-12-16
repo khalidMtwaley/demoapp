@@ -29,6 +29,14 @@ class AppColor {
       listen: listen,
     );
   }
+  static Color greenColor2(BuildContext context, {bool listen = true}) {
+    return AppTheme.getByTheme(
+      context,
+      light: const Color(0xff2bd59a),
+      dark: const Color(0xff2bd59a),
+      listen: listen,
+    );
+  }
   static Color lightGreenColor(BuildContext context, {bool listen = true}) {
     return AppTheme.getByTheme(
       context,
