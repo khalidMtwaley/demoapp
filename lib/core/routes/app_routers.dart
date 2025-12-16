@@ -24,6 +24,10 @@ class AppRouters {
         return MaterialPageRoute(
           builder: (_) => const RegisterSelectAvatarScreen(),
         );
+      case RoutesName.registerInterestsScreen:
+        return MaterialPageRoute(
+          builder: (_) => const RegisterInterestsScreen(),
+        );
       case RoutesName.loginScreen:
         return MaterialPageRoute(
           builder: (_) => const LoginScreen(),
