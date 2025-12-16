@@ -170,17 +170,17 @@ class _CustomSelectAvatarsWidgetState extends State<CustomSelectAvatarsWidget> {
           },
         ).paddingHorizontal(7.w),
         8.verticalSpace,
-
         ValueListenableBuilder<File?>(
           valueListenable: selectedImageFile,
           builder: (context, file, _) {
             if (file == null) return const SizedBox();
 
             return Padding(
-              padding: EdgeInsets.only(top: 20.h),
+              padding: EdgeInsets.only(top: 10.h),
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
+                  /// avatar image
                   Container(
                     width: 100,
                     height: 100,
@@ -193,6 +193,7 @@ class _CustomSelectAvatarsWidgetState extends State<CustomSelectAvatarsWidget> {
                     ),
                     child: ClipOval(child: Image.file(file, fit: BoxFit.cover)),
                   ),
+
                   Positioned(
                     top: -6,
                     left: 0,
@@ -214,12 +215,44 @@ class _CustomSelectAvatarsWidgetState extends State<CustomSelectAvatarsWidget> {
                       ),
                     ),
                   ),
+
+                  Positioned(
+                    bottom: -6,
+                    right: -6,
+                    child: GestureDetector(
+                      onTap: () {
+                        selectedImageFile.value = null;
+                        selectedAvatarIndex.value = null;
+                        _notifyParent();
+                      },
+                      child: Container(
+                        width: 26,
+                        height: 26,
+                        decoration: BoxDecoration(
+                          color: Colors.redAccent,
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.15),
+                              blurRadius: 4,
+                            ),
+                          ],
+                        ),
+                        child: const Icon(
+                          Icons.close,
+                          size: 16,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             );
           },
         ),
-        36.verticalSpace,
+
+        32.verticalSpace,
         const SecretInformationTextWidget(),
       ],
     );
